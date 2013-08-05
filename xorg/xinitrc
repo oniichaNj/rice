@@ -23,14 +23,11 @@ xrdb -merge ~/.Xresources
 feh --bg-fill /home/kitty/images/wallpaper/Neko7.4.png
 
 #and why the fuck aren't YOU using dwm?
-
 while true; do
-    dwm >/dev/null 2>&1
+    dwm >/dev/null 2>&1 #Restart it without loosing windows using M-SHIFT-Q
 done
 
-#exec twm
-#exec openbox
-#Oh, and dmenu is nice ^______^
-exec dmwnu_run &
+#Oh, dmenu is nice, too, I guess
+dmenu_run &
 
 #no EOF here fuck you
