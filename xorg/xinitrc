@@ -3,16 +3,11 @@
 #go swede
 setxkbmap se
 
-#fonts - TODO - this shit does not work
-#xset +fp /usr/share/fonts
-#xset +fp /home/oniichan/fonts
+#fonts 
 xset fp rehash
 
-#stuffy junk
-while true ; do
-    xsetroot -name "$(acpi -b | awk 'sub(/,/,"") {print $3, $4}')"
-    sleep 1m
-done &
+#LEET
+dwmstatus &
 
 # MOAR RICE
 compton --config ~/.compton.conf -b
@@ -26,12 +21,14 @@ redshift -l 56.148737:13.558502 -t 6500K:4200K &
 #we need a god damn cat as a wallpaper. Why? Because FUCK YOU, that's why
 feh --bg-fill /home/kitty/images/wallpaper/cat.jpg 
 
+#w2c battery warning
+./home/kitty/.scripts/batterystatus.sh &
+
 #tpb is not the pirate bay, but a daemon in this case to deal with ultra leet stuff
 tpb -d &
 
 #and why the fuck aren't YOU using dwm?
 #Oh, and dmenu is nice ^______^
-
 while true; do
     dwm >/dev/null 2>&1
 done
