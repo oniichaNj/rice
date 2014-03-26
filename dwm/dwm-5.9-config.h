@@ -3,22 +3,23 @@
 /* appearance */
 
 static const char font[]            = "-*-clean-*-*-*-*-*-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#989898"; /* Border color. */
-static const char normbgcolor[]     = "#5a5a5a"; /* BG color of not highlighted stuff, such as unused workspaces */
-static const char normfgcolor[]     = "#222222"; /* FG color of same as above  */
-static const char selbordercolor[]  = "#5a5a5a"; 
-static const char selbgcolor[]      = "#3e3c3a"; /* BG color of highlighted stuff. */
-static const char selfgcolor[]      = "#fefefe"; /* FG color of highlighted stuff. */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const char normbordercolor[] = "#5a5a5a"; /* Border color. */
+static const char normbgcolor[]     = "#222222"; /* BG color of not highlighted stuff, such as unused workspaces */
+static const char normfgcolor[]     = "#7ccc00"; /* FG color of same as above  */
+static const char selbordercolor[]  = "#CC0000";
+static const char selbgcolor[]      = "#444444"; /* BG color of highlighted stuff. */
+static const char selfgcolor[]      = "#7ccc00"; /* FG color of highlighted stuff. */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int snap      = 12;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* Pointless border thingies - UNCOMMENT IF YOU PATCHED */
-static const unsigned int gappx     = 24;      
+static const unsigned int gappx     = 24;
 
 /* tagging */
-static const char *tags[] = { ";;", ";;", ";;", ";;", ";;" };
+static const char *tags[] = { "browse", "ssh", "pass", "mail", "edit", "build", "etc", "tmp"
+};
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -38,6 +39,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod1Mask
+#define MODKEY4 Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -50,10 +52,12 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run",/* "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor,*/ NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+static const char *lockcmd[]  = { "xautolock", "-locknow", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY4,                      XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
