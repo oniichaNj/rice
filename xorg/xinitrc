@@ -3,7 +3,8 @@
 #go swede
 setxkbmap se
 
-#fonts 
+#fonts
+xset fp+ /home/p/fonts
 xset fp rehash
 
 #LEET
@@ -15,17 +16,14 @@ compton --config ~/.compton.conf -b
 #apply dem smexy colors
 xrdb -merge ~/.Xresources
 
+# Screen Locker
+xautolock -time 5 -locker slock -nowlocker slock -detectsleep -corners 000+ -cornerdelay 3 &
+
 #SNAKE OIL EYE IMPROVEMENT
-redshift -l 56.148737:13.558502 -t 6500K:4200K &
+redshift -l 56.14:13.55 -t 6500K:4200K &
 
 #we need a god damn cat as a wallpaper. Why? Because FUCK YOU, that's why
-feh --bg-fill /home/kitty/images/wallpaper/cat.jpg 
-
-#w2c battery warning
-./home/kitty/.scripts/batterystatus.sh &
-
-#tpb is not the pirate bay, but a daemon in this case to deal with ultra leet stuff
-tpb -d &
+feh --bg-fill /home/p/images/wallpaper/cat.jpg 
 
 #and why the fuck aren't YOU using dwm?
 #Oh, and dmenu is nice ^______^
