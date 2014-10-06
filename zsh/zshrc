@@ -59,14 +59,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-# IDA PRO launch
-alias 'idapro=wine64 /home/kitty/.wine/idapro/idaq64.exe > /dev/null 2>&1 &'
-
-#Touhou launch
-alias 'th08=wine /home/kitty/.wine/th08/th08.exe'
-
-#Jewtube watcher - xcopy should contain the VIDEO url, not just the webpage URL
-alias 'jewtube=mplayer2 -cache 8192 "$(/usr/bin/xclip -o)"'
 # Short command aliases
 alias 'ls=ls --color=auto'
 alias 'l=ls'
@@ -77,13 +69,8 @@ alias 'grep=grep --colour'
 alias 'e=emacs -nw'
 alias 'enw=emacs -nw'
 alias 'cl=clear'
-alias 'bye=sudo shutdown -h now'
-alias 'brb=sudo reboot'
 alias 'grep=grep -n --color=auto'
 alias 'kitty=cat'
-alias 'catboy=cowsay I sell catboy and catboy accessories. | toilet -f term -F gay'
-alias 'k=toilet -f mono9 -F gay k.'
-alias 'bsdfetch=screenfetch -D freebsd'
 # Play safe!
 alias 'rm=rm -i'
 alias 'mv=mv -i'
@@ -97,7 +84,7 @@ alias 'dus.=du -ms .* | sort -n'
 alias 'fcs=(for i in * .*(N); do echo $(find $i -type f | wc -l) "\t$i"; done) | sort -n'
 alias 'fcs.=(for i in .*; do echo $(find $i -type f | wc -l) "\t$i"; done) | sort -n'
 alias 'zap=clear; echo -en "\e[3J"'
-alias 'timeforanime=sshfs oniichan@192.168.55.101:/home/oniichan /remote -C'
+
 # Typing errors...
 alias 'cd..=cd ..'
 alias '..=cd ..'
@@ -110,11 +97,6 @@ alias -g H='| head'
 alias -g S='| sort'
 alias -g T='| tail'
 
-
-# SSH aliases
-alias 'sshse=ssh oniichan@oniichan.no-ip.org'
-alias 'sshsi=ssh oniichan@192.168.55.101'
-alias 'sshp= ssh oniichan@onii.uguu.se'
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)

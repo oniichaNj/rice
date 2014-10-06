@@ -1,6 +1,6 @@
 urxvt*scrollBar:        false
-URxvt.background: #181818
-
+!URxvt.background: #181818
+Emacs*toolBar: 0
 
 URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:      /usr/bin/firefox
@@ -9,40 +9,83 @@ URxvt.perl-ext:      default,url-select
 URxvt.keysym.M-u:    perl:url-select:select_next
 URxvt.url-select.launcher:   /usr/bin/firefox
 URxvt.url-select.underline: true
-*background: #181818
-*foreground: #c0c0c0
-*cursorColor: #93a1a1
 !URxvt.depth: 32
 
-!black
-URxvt*color0:  #282828
-URxvt*color8:  #494949
-!red
-URxvt*color1:  #b76969
-URxvt*color9:  #b87e7e
-!green
-URxvt*color2:  #719d72
-URxvt*color10: #839d84
-!yellow
-URxvt*color3:  #909858
-URxvt*color11: #919864
-!blue
-URxvt*color4:  #68668f
-URxvt*color12: #73718f
-!magenta
-URxvt*color5:  #966894
-URxvt*color13: #987397
-!cyan
-URxvt*color6:  #688891
-URxvt*color14: #758c93
-!white
-URxvt*color7:  #8e8e8e
-URxvt*color15: #aeaeae
+! *background: #222222
+! *foreground: #eeeeee
+! *cursorColor: #B15C00 
+ 
+! !! black dark/light
+! *color0: #222222
+! *color8: #444444
 
+! !! red dark/light
+! *color1: #B10000
+! *color9: #CC0000
 
+! !! green dark/light
+! *color2: #6CB100
+! *color10: #7CCC00
+
+! !! yellow dark/light
+! *color3: #B15C00
+! *color11: #CC6A00
+
+! !! blue dark/light
+! *color4: #005577
+! *color12: #0075A3
+
+! !! magenta dark/light
+! *color5: #5600B1
+! *color13: #6300CC
+
+! !! cyan dark/light
+! *color6: #007177
+! *color14: #009199
+
+! !! white dark/light
+! *color7: #bbbbbb
+! *color15: #eeeeee  
+
+*background: #002b36
+*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+ 
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+ 
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+ 
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+ 
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+ 
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+ 
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+ 
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3
 
 URxvt.font:                -*-berry-*-*-*-*-11-*-*-*-*-*-*-*
 URxvt.boldFont:            -*-berry-*-*-*-*-11-*-*-*-*-*-*-*
-
-!URxvt.font: xft:Inconsolata:Medium:size=10
-!URxvt.boldFont: xft:Inconsolata:Bold:size=10
