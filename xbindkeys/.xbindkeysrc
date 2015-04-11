@@ -1,0 +1,45 @@
+#Tablet Rotate button (run rotate script)
+"~/.scripts/rotate.sh"
+    m:0x0 + c:192
+    XF86RotateWindows
+
+#screenshot
+"scrot ~/screenshots/%Y-%m-%d-%T-screenshot.png"
+    m:0x0 + c:107
+    Print
+
+#volume buttons
+"~/.scripts/vol.sh raise"
+    m:0x0 + c:123
+    XF86AudioRaiseVolume
+
+"~/.scripts/vol.sh lower"
+    m:0x0 + c:122
+    XF86AudioLowerVolume
+
+"~/.scripts/vol.sh mute"
+    m:0x0 + c:121
+    XF86AudioMute
+
+#"Give me ip"-button
+"firefox ip.luz.lu"
+    m:0x0 + c:156
+    XF86Launch1
+
+#ThinkPad music controls
+"mpc toggle"
+    m:0x0 + c:172
+    XF86AudioPlay
+
+"mpc stop"
+    m:0x0 + c:174
+     XF86AudioStop
+
+"mpc next"
+    m:0x0 + c:171
+    XF86AudioNext
+
+"mpc prev"
+    m:0x0 + c:173
+    XF86AudioPrev
+    
